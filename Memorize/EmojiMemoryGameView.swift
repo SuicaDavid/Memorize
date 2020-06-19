@@ -11,14 +11,14 @@ import SwiftUI
 struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
     var body: some View {
-        HStack {
-            ForEach(viewModel.cards) { card in
-                CardView(card: card)
-                    .onTapGesture {
-                        print("1")
-                        self.viewModel.choose(card: card)
-                }
+        Grid(viewModel.cards) { card in
+            CardView(card: card)
+                .onTapGesture {
+                    print("1")
+                    self.viewModel.choose(card: card)
+                    
             }
+            .padding(5)
         }
         .padding()
         .foregroundColor(Color.orange)
