@@ -5,7 +5,6 @@
 //  Created by Suica on 19/06/2020.
 //  Copyright © 2020 Suica. All rights reserved.
 //
-
 import SwiftUI
 
 struct GridLayout {
